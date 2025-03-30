@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "5d713995b721c3bb38c1f5d0",
+    "name": "Pizza",
+    "description": "Delicious pizzas with a variety of toppings",
+    "image": "pizza-category.jpg"
+  },
+  {
+    "_id": "5d713a66ec8f2b88b8f830b8",
+    "name": "Burgers",
+    "description": "Juicy burgers with premium ingredients",
+    "image": "burger-category.jpg"
+  },
+  {
+    "_id": "5d725a037b292f5f8ceff787",
+    "name": "Pasta",
+    "description": "Authentic Italian pasta dishes",
+    "image": "pasta-category.jpg"
+  },
+  {
+    "_id": "5d725a1b7b292f5f8ceff788",
+    "name": "Desserts",
+    "description": "Sweet treats to satisfy your cravings",
+    "image": "dessert-category.jpg"
+  }
+] 

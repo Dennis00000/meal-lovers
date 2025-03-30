@@ -1,0 +1,132 @@
+/* Global APP STYLES with Glass Morphism */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-blur: blur(10px);
+  --primary-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --text-primary: #333;
+  --text-secondary: #666;
+}
+
+body {
+  background-color: #f5f7fa;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(30, 60, 114, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(42, 82, 152, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(30, 60, 114, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.error-boundary {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.error-boundary h2 {
+  color: #e53e3e;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.error-boundary p {
+  margin-bottom: 25px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.error-reload-btn {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+}
+
+.error-reload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 60, 114, 0.3);
+}
+
+.error-details {
+  margin-top: 30px;
+  text-align: left;
+  background: rgba(247, 250, 252, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(237, 242, 247, 0.5);
+}
+
+.error-details summary {
+  cursor: pointer;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.error-details pre {
+  overflow-x: auto;
+  background: rgba(237, 242, 247, 0.7);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(237, 242, 247, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 60, 114, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 60, 114, 0.5);
+} 

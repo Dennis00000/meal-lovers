@@ -1,0 +1,701 @@
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+/* Add spacing between sections */
+.home-page > section:not(:first-child) {
+  margin-top: 2rem;
+}
+
+/* Add a subtle background pattern */
+.home-page {
+  background-color: #f9fafb;
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+/* Add responsive padding */
+@media (max-width: 768px) {
+  .home-page > section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Hero Section - Glass/Blur Effect */
+.hero-section-glass {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e3a8a;
+  padding-top: 0; /* Remove padding as navbar is fixed */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(8px); /* Apply blur to the image */
+  transform: scale(1.1); /* Scale up slightly to avoid blur edges */
+}
+
+.hero-glass-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(17, 24, 39, 0.7), rgba(37, 99, 235, 0.7));
+  backdrop-filter: blur(10px); /* Additional blur for the overlay */
+  z-index: 1;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+  margin-top: 60px; /* Add margin to account for navbar */
+}
+
+.hero-section-glass .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section-glass h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section-glass p {
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-section-glass .rounded-md {
+  border-radius: 0.375rem;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Ensure the features section starts right after the hero */
+.features-section {
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+/* Features Section */
+.features-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.features-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Improved Popular Items Section */
+.popular-section {
+  padding: 80px 0;
+  background-color: #f9fafb;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1e3a8a;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  border-radius: 2px;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .popular-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.popular-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.popular-image-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.popular-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.popular-card:hover .popular-image {
+  transform: scale(1.05);
+}
+
+.popular-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.popular-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.popular-description {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.popular-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.popular-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.popular-button {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.popular-button:hover {
+  background-color: #1e40af;
+}
+
+.view-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.view-all-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: #1e3a8a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 2px solid #1e3a8a;
+  transition: all 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #1e3a8a;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.testimonials-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.testimonials-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+/* CTA Section */
+.cta-section {
+  display: none; /* Hide the CTA section */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-section-glass {
+    height: 100vh; /* Keep full height on mobile */
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section-glass {
+    height: 100vh; /* Keep full height on mobile */
+  }
+  
+  .glass-card {
+    padding: 30px 20px;
+    margin: 0 15px;
+  }
+  
+  .hero-section-glass h1 {
+    font-size: 1.875rem;
+  }
+  
+  .hero-section-glass p {
+    font-size: 1rem;
+  }
+  
+  .hero-section-glass .flex {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .hero-section-glass .rounded-md {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-section-glass {
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+  
+  .features-grid,
+  .popular-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .popular-section,
+  .features-section,
+  .testimonials-section,
+  .cta-section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .popular-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .popular-section {
+    padding: 60px 0;
+  }
+}
+
+/* Add a scroll indicator to help users know there's more content */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Update the hero section to maintain full height while integrating with navbar */
+.hero-section-modern {
+  position: relative;
+  height: 100vh; /* Keep full viewport height */
+  background-color: #f8f9fa;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0; /* Remove vertical padding */
+  margin-top: -80px; /* Pull hero section up to overlap with navbar */
+  padding-top: 80px; /* Add padding equal to navbar height */
+}
+
+/* Add a subtle gradient overlay to help with navbar integration */
+.hero-section-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(248, 249, 250, 0.9) 0%, rgba(248, 249, 250, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure hero container sits above the gradient and is properly centered */
+.hero-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.hero-image-circle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #6a5acd;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.hero-food-image {
+  position: relative;
+  z-index: 2;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.floating-ingredient {
+  position: absolute;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-1 {
+  top: 10%;
+  right: 15%;
+}
+
+.ingredient-2 {
+  bottom: 20%;
+  left: 10%;
+}
+
+.ingredient-3 {
+  top: 30%;
+  left: 5%;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .hero-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+  }
+  
+  .hero-description {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image-container {
+    margin-top: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .hero-image-circle {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .hero-food-image {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .floating-ingredient {
+    width: 40px;
+    height: 40px;
+  }
+} 

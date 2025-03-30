@@ -1,0 +1,45 @@
+[
+  {
+    "_id": "5d713995b721c3bb38c1f5d1",
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with tomato sauce, mozzarella, and basil",
+    "price": 9.99,
+    "category": "5d713995b721c3bb38c1f5d0",
+    "ingredients": ["Dough", "Tomato Sauce", "Mozzarella", "Basil", "Olive Oil"],
+    "preparationTime": 20,
+    "isVegetarian": true,
+    "isAvailable": true,
+    "featured": true
+  },
+  {
+    "_id": "5d713a66ec8f2b88b8f830b9",
+    "name": "Classic Cheeseburger",
+    "description": "Juicy beef patty with cheese, lettuce, tomato, and special sauce",
+    "price": 8.99,
+    "category": "5d713a66ec8f2b88b8f830b8",
+    "ingredients": ["Beef Patty", "Cheese", "Lettuce", "Tomato", "Onion", "Special Sauce", "Bun"],
+    "preparationTime": 15,
+    "isAvailable": true
+  },
+  {
+    "_id": "5d725a037b292f5f8ceff788",
+    "name": "Spaghetti Carbonara",
+    "description": "Traditional Italian pasta with eggs, cheese, pancetta, and black pepper",
+    "price": 12.99,
+    "category": "5d725a037b292f5f8ceff787",
+    "ingredients": ["Spaghetti", "Eggs", "Pecorino Romano", "Pancetta", "Black Pepper"],
+    "preparationTime": 25,
+    "isAvailable": true
+  },
+  {
+    "_id": "5d725a1b7b292f5f8ceff789",
+    "name": "Chocolate Lava Cake",
+    "description": "Warm chocolate cake with a molten chocolate center",
+    "price": 6.99,
+    "category": "5d725a1b7b292f5f8ceff788",
+    "ingredients": ["Chocolate", "Butter", "Sugar", "Eggs", "Flour"],
+    "preparationTime": 15,
+    "isVegetarian": true,
+    "isAvailable": true
+  }
+] 

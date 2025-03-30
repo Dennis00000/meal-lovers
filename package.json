@@ -1,0 +1,20 @@
+{
+  "name": "meal-lovers",
+  "version": "1.0.0",
+  "description": "Meal Lovers Food Delivery App",
+  "type": "module",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:admin": "cd admin && npm run dev",
+    "create-admin": "node createAdminDirect.js",
+    "test-user-login": "node testUserLogin.js",
+    "create-simple-admin": "node createSimpleAdmin.js",
+    "fix-passwords": "node fixPasswords.js",
+    "create-test-user": "node createTestUser.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.15.0"
+  }
+}

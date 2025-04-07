@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "cd backend && npm start",
+    "postinstall": "cd backend && npm install",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
     "dev:admin": "cd admin && npm run dev",
